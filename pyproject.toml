@@ -1,0 +1,21 @@
+[project]
+name = "tick-ai"
+version = "0.1.0"
+description = "Agentic EARS + Termite TUI Generator"
+dependencies = [
+    "rich",
+    "openai",
+    "anthropic",
+    "ollama",
+    "urwid",
+    "textual",
+    "httpx",
+    "pydantic",
+]
+
+[project.scripts]
+tick = "tick.__main__:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

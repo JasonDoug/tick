@@ -1,0 +1,36 @@
+[project]
+name = "termite-ai"
+version = "1.0.5"
+description = "Generate terminal UIs from simple text prompts"
+readme = "README.md"
+requires-python = ">=3.13"
+license = { text = "Apache License" }
+authors = [
+    { name = "shobrook", email = "shobrookj@gmail.com" }
+]
+keywords = ["openai", "claude", "cli", "commandline", "tui", "terminal", "generative-ui"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+]
+dependencies = [
+    "urwid",
+    "anthropic",
+    "openai",
+    "ollama",
+    "textual",
+    "rich",
+]
+
+[project.scripts]
+termite = "termite.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["termite"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
